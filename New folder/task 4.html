@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task 4</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'header header header header '
+            'footer footer footer footer ';
+    }
+
+    @media only screen and (max-width:300px) {
+        body {
+            background-color: rgb(247, 60, 60);
+        }
+
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'header header header header '
+                'footer footer footer footer ';
+        }
+
+        aside {
+            display: none;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (min-width: 300px) and (max-width:500px) {
+        body {
+            background-color: rgb(61, 61, 236);
+        }
+
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'header header header header '
+                'footer footer footer footer ';
+        }
+
+        aside {
+            display: none;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 500px) and (max-width:800px) {
+        body {
+            background-color: rgb(236, 236, 78);
+        }
+
+        .container {
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'header header header header '
+                'footer footer footer footer ';
+        }
+
+        span {
+            display: block;
+            text-align: center;
+        }
+        h2{
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    @media (min-width: 800px) {
+        body {
+            background-color:rgb(100, 77, 77);
+        }
+    }
+
+    .bdr {
+        border: 2px solid rgb(247, 100, 100);
+        padding: 10px 23px;
+        background-color: rgb(66, 243, 155);
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 5px rgb(107, 210, 245), 4px 6px rgb(235, 145, 145);
+        text-shadow: -3px -2px 2px white;
+    }
+
+    .bdr1 {
+        border: 2px solid rgb(245, 84, 84);
+        padding: 10px 23px;
+        font-size: 25px;
+        background: linear-gradient(to right, rgb(241, 140, 140),rgb(236, 138, 120),rgb(241, 152, 136),rgb(245, 111, 106),rgb(247, 133, 133),rgb(252, 119, 119),rgb(247, 97, 97));
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+        /* box-shadow: 3px 5px rgb(19, 0, 128), 4px 6px rgb(180, 236, 24); */
+
+
+    }
+    .bdr2{
+        border: 2px solid rgb(250, 96, 96);
+        /* padding: 10px 23px; */
+        background-color: rgb(243, 145, 145);
+        justify-content: center;
+        align-items:center;
+        
+    }
+
+    .bdr1:hover {
+        transform: rotate(360deg);
+        transform: translateY(123px);
+    }
+
+
+    nav {
+        grid-area: navbar;
+    }
+
+    section {
+        grid-area: section;
+        background-color: rgb(241, 241, 85);
+    }
+
+    aside {
+        grid-area: aside;
+    }
+    header{
+        grid-area: header;
+        background: linear-gradient(to right,rgb(117, 248, 105) , rgb(241, 92, 92));
+    }
+    header:hover{
+        transform: scale(1.2);
+    }
+
+    #max:hover {
+        background-color: rgb(85, 81, 81);
+        color: white;
+        height: 400px;
+        width: 400px;
+        border-radius: 100px;
+        font-size: 45px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+    }
+
+    #max {
+        display: flex;
+        height: 400px;
+        width: 400px;
+        background-color:rgb(231, 231, 83);
+        background: linear-gradient(to right, rgba(92, 88, 88, 0), rgb(238, 81, 81));
+        transition: all 1s ease-in-out .3s;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+    Footer:hover{
+        background-color: rgb(240, 110, 132)
+    }
+    a:link{
+       background-color: whitesmoke;
+    }
+    a:hover{
+        color:white;
+        border: 2px solid rgb(252, 99, 99);
+        background-color: rgb(223, 238, 85);
+        transition: width 2s;
+
+    }
+    bdr3{
+        border: 2px solid rgb(231, 96, 96);
+        padding: 10px 23px;
+        background-color: rgb(85, 233, 159);
+        text-shadow: -3px -2px 2px white;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 5px rgb(86, 204, 243), 4px 6px white;
+        /* text-shadow: -3px -2px 2px white; */
+    }
+    
+</style>
+
+<body>
+    <div class="container ">
+        <nav class="bdr2">
+            <span  style="font-size: 40px;"> <a href="./index.html">HOME</a>   </span>
+            <span  style="font-size: 40px;"><a href="./4 about.html">ABOUT</a>   </span>
+            
+        
+        </nav>
+        <section class="bdr1">
+            <h2 style="justify-content: center; ">PC GAMING</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque nemo cupiditate distinctio et
+                expedita. Delectus quaerat accusamus inventore tenetur error quam minus, provident fugit repellat
+                necessitatibus? Architecto itaque quidem sequi blanditiis, facere accusantium hic.lorem122 Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Eligendi dignissimos ut rerum aut. Fuga delectus suscipit
+                debitis libero. Itaque, ipsum dignissimos consequatur repellat distinctio enim dolorem, facilis esse
+                dolorum illum earum aliquid numquam blanditiis ipsam reiciendis iure nobis quo cum maiores aperiam
+                pariatur. Quas aliquam, quae non rerum, architecto eligendi blanditiis officia placeat dolor soluta
+                explicabo. Voluptatem tenetur perspiciatis neque quidem ducimus velit id explicabo, illo magni quis
+                voluptatum. Tempora quod, dicta illum ratione quo at dolores cupiditate aperiam laboriosam amet sequi
+                quaerat similique incidunt eius deleniti deserunt accusamus eligendi nemo est veritatis fugiat ducimus!
+                Modi ut vel et nihil asperiores mollitia obcaecati, neque accusantium corrupti, quisquam voluptatem rem?
+                Possimus tempore et fugit cumque culpa aliquam doloremque odio hic, cum, minima nostrum!</p>
+        </section>
+        <aside class="bdr">
+            <h1 id="max">WELCOME</h1>
+        </aside>
+        <!-- <picture>
+            <img src="./flower.jpg" alt="">
+        </picture> -->
+        <header class="bdr3" > Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur distinctio ipsum voluptate quos voluptas quod eveniet perferendis, illum illo facilis dolorem qui fugit blanditiis non accusantium sapiente facere sed, tempore iusto dolore tenetur repellendus delectus quam. Sint eum, ducimus rem quaerat velit perferendis!lorem40 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam architecto, aperiam nihil minima consectetur voluptatem dolorum ab enim at, nesciunt esse similique expedita facilis doloribus. Rem quisquam aperiam, quas fuga saepe, facere nostrum aliquam harum veniam vitae, quae officia culpa!
+             </header>
+    
+    <footer class="bdr" style="font-family: cursive;">THANKYOU</footer>
+
+</body>
+
+</html>
