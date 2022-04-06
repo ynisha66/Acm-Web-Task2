@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Property</title>
+    <style>
+        .box {
+            background: peachpuff;
+            color: black;
+            text-align: center;
+            font-size: 50px;
+            display: none;
+        }
+        @media only screen and (max-width:300px){
+            #box1{
+                display: block;
+                background-color: aquamarine;
+            }
+        }
+        @media (min-width:300px)  and (max-width:500px){
+            #box2{
+                display: block;
+                background-color: rgb(64, 158, 158);
+            }
+        }
+        @media (min-width:500px)  and (max-width:800px){
+            #box3{
+                display: block;
+                background-color: rgb(114, 153, 8);
+            }
+        }
+        @media (min-width:800px)  and (max-width:1000px){
+            #box4{
+                display: block;
+                background-color: firebrick;
+            }
+        }
+        h1{
+            background-color: aquamarine;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* div li p{
+            background-color: brown;
+            color: wheat;
+        } */
+        /* div > p{
+            background-color: brown;
+            color: wheat;
+        } */
+        div + p{
+            background-color: rgb(196, 108, 36);
+        }
+        .bag{
+            margin: auto;
+            display: block;
+            width: 23px;
+        }
+        input{
+            display: block;
+        }
+        input[type='text']{
+            padding: 13px;
+            margin: 2px;
+            border: 2px solid rgba(58, 212, 218, 0.418);
+        }
+        a[target]{
+            font-size: 30px;
+            color: brown;
+        }
+        a[target='_self']{
+            font-size: 16px;
+            color: rgb(165, 136, 42);
+        }
+        li:nth-child(4){
+            color: rgba(218, 58, 98, 0.418);
+           
+        }
+        /* li:nth-child(even){
+            color: rgba(218, 143, 58, 0.418);
+        } */
+        /* li:nth-child(odd){
+            color: rgba(58, 218, 170, 0.418);
+        } */
+        /* li:nth-child(2n+1){
+            color: rgba(182, 171, 13, 0.89);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1">Iphone</div>
+    <div class="box" id="box2">Tablet</div>
+    <div class="box" id="box3">Computer</div>
+    <div class="box" id="box4">Wildscreen</div>
+    <h1>CSS Selector</h1>
+    <div class="container">
+        <div class="row">
+           <ul>
+               <li class="class"> <p>Using Github Codespaces and Visual Studio Code</p></li>
+               <li>You can ever work from the web browsers</li>
+           </ul>
+        </div>
+        <p>Github offers built-in support for visual studio</p>
+    </div>
+    <p>Online internship with competition</p>
+    <div class="bag">
+        <h2><a href="http://facebook.com" target="_blank">Go to the facebook page</a></h2>
+        <h2><a href="http://instagram.com" target="_self">Go to instagram</a></h2>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">css</li>
+            <li class="item" id="item2">uhv</li>
+            <li class="item" id="item3">dstl</li>
+            <li class="item" id="item4">math</li>
+            <li class="item" id="item5">coa</li>
+            <li class="item" id="item6">ds</li>
+            <li class="item" id="item7">phy</li>
+            <li class="item" id="item8">elecs</li>
+
+        </ul>
+    </div>
+    
+</body>
+
+</html>
