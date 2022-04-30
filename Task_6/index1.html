@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leep year program</title>
+    
+
+</head>
+<body>
+    <h3> This is a page where we perform program</h3>
+    <script>
+        const year = prompt('Enter a year:');
+        console.log(year);
+        checkLeapYear(year);
+        function checkLeapYear(year) {
+            if ((year % 4 == 0) && (year % 100 != 0) || (year %400 == 0)) {
+                alert(year + ' is a leap year');
+            }
+            else {
+                alert('year is not leap year');
+            }
+        }
+
+    </script>
+
+</body>
+</html>
